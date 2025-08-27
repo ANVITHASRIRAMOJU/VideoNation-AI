@@ -1,0 +1,71 @@
+<!--templates login.html--><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VideoNation AI</title>
+  <link rel="stylesheet" href="{{url_for('static', path='auth.css')}}">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="/" class="logo">VideoNation AI</a>
+  </nav>
+
+  <!-- Main container to center card -->
+  <div class="main-container">
+    <div class="card">
+      <h2>Login</h2>
+      <form id="loginForm">
+          <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" required>
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+      </form>
+
+      <div id="loginMessage" class="error"></div>
+
+      <div class="actions">
+          <span>Don’t have an account?</span>
+          <a href="/signup" class="link-btn">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+
+  const res = await fetch("/api/login", {
+    method: "POST",
+    body: formData
+  });
+
+  const msgEl = document.getElementById("loginMessage");
+  if (!res.ok) {
+    msgEl.textContent = "No user found with the username or password.";
+    return;
+  }
+
+  const data = await res.json();
+  if (data.message === "Login successful") {
+    window.location.href = "/video"; // redirect after success
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

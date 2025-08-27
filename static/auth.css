@@ -1,0 +1,156 @@
+/* ===== General Layout ===== static auth.css*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #4fbfb3;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 28px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #3e3e3e;
+}
+
+/* ===== Main Container ===== */
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+/* ===== Card ===== */
+.card {
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* ===== Headings ===== */
+.card h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #4fbfb3;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: #000;
+}
+
+/* ===== Form Groups ===== */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #000;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #4fbfb3;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #3aa79a;
+}
+
+/* ===== Buttons ===== */
+button.btn-primary {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #4fbfb3, #74ebd5);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(79,191,179,0.3);
+}
+
+button.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79,191,179,0.4);
+}
+
+/* ===== Links & Actions ===== */
+.actions {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.actions a {
+  color: #4fbfb3;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.actions a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Error / Success Messages ===== */
+.error {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red; /* Errors in red */
+  text-align: center;
+}
+
+.success {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green; /* Success in green */
+  text-align: center;
+}
+
+
+
+

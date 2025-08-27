@@ -1,0 +1,128 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VideoNation AI</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    /* Left Side */
+    .hero-left {
+      flex: 1;
+      background: #1a1a1a; /* blackish grey */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero-left h1 {
+      font-size: 52px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #4fbfb3; /* existing green */
+    }
+
+    .btn-primary {
+      padding: 14px 32px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #4fbfb3; /* green accent */
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: #3aa198;
+      transform: translateY(-2px);
+    }
+
+    /* Right Side with darker animated gradient */
+    .hero-right {
+      flex: 1;
+      background: linear-gradient(-45deg, #ffffff, #b2e5dc, #ffffff);
+      background-size: 300% 300%;
+      animation: gradientShift 6s ease infinite;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+    }
+
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero-right h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .hero-right p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    .highlight {
+      color: #4fbfb3; /* green highlight */
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-left, .hero-right {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <!-- Left Side -->
+    <div class="hero-left">
+      <h1>VideoNation AI</h1>
+      <a href="/login" class="btn-primary">Get Started</a>
+    </div>
+
+    <!-- Right Side -->
+    <div class="hero-right">
+      <h2>Generate Videos Effortlessly</h2>
+      <p>
+        Create stunning videos using <span class="highlight">fal.ai</span> for powerful video generation.  
+        Refine and enhance your prompts with <span class="highlight">Gemini API</span> to achieve cinematic quality results.
+      </p>
+    </div>
+  </section>
+</body>
+</html>
