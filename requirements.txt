@@ -7,7 +7,7 @@ pytest
 pytest-asyncio
 google-genai
 fal-client
-pymango
+pymongo
 bcrypt
 python-multipart
 jinja2
